@@ -1,0 +1,49 @@
+.split {
+    height: 100%;
+    width: 70%;
+    position: fixed; 
+    overflow: auto;
+      
+}
+
+.right {
+    right: 0;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 5%;
+    background-color: rgb(211, 162, 162);
+    text-decoration: none;
+  }
+
+.left {
+    left: 0;
+    padding-left: 2%;
+    background-color: rgb(151, 172, 143);
+    font-size: large; 
+    text-decoration: none;
+    
+}
+
+p.none{
+    border-style: none;
+    background-color: rgb(216, 179, 179);
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    letter-spacing: 1px;
+}
+
+a:link{
+    color: rgb(0, 0, 8); 
+    text-decoration: none; 
+}
+a:visited{
+    color: rgb(0, 0, 8);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    text-decoration: underline;
+}
