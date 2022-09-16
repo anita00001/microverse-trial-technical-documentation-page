@@ -18,11 +18,7 @@
           <ul>
             <li><a href="#introduction">Introduction</a></li>
 
-            <li>
-              <a href="#what_you_should_already_know"
-                >What you should already know</a
-              >
-            </li>
+            <li><a href="#what_you_should_already_know">What you should already know</a></li>
 
             <li><a href="#javascript_and_java">JavaScript and Java</a></li>
 
@@ -47,6 +43,7 @@
             <li><a href="#function_declarations">Function declarations</a></li>
 
             <li><a href="#reference">Reference</a></li>
+            <br><br><br><br>
           </ul>
         </div>
       </div>
@@ -83,7 +80,7 @@
           provide continuity of information from one invocation to another of
           the application, or perform file manipulations on a server.
         </li>
-        <br /><br />
+        <br><br>
 
         <h2 id="what_you_should_already_know">What you should already know</h2>
         <p>This guide assumes you have the following basic background:</p>
@@ -94,7 +91,7 @@
         <li>
           Some programming experience. If you are new to programming, try one of
           the tutorials linked on the main page about JavaScript.
-        </li>
+        </li><br>
 
         <h2 id="javascript_and_java">JavaScript and Java</h2>
         <p>
@@ -103,7 +100,7 @@
           does not have Java's static typing and strong type checking.
           JavaScript follows most Java expression syntax, naming conventions and
           basic control-flow constructs which was the reason why it was renamed
-          from LiveScript to JavaScript.<br />
+          from LiveScript to JavaScript.<br><br>
           In contrast to Java's compile-time system of classes built by
           declarations, JavaScript supports a runtime system based on a small
           number of data types representing numeric, Boolean, and string values.
@@ -112,66 +109,58 @@
           dynamic inheritance; that is, what is inherited can vary for
           individual objects. JavaScript also supports functions without any
           special declarative requirements. Functions can be properties of
-          objects, executing as loosely typed methods.<br />
+          objects, executing as loosely typed methods.<br><br>
           JavaScript is a very free-form language compared to Java. You do not
           have to declare all variables, classes, and methods. You do not have
           to be concerned with whether methods are public, private, or
           protected, and you do not have to implement interfaces. Variables,
-          parameters, and function return types are not explicitly typed.<br />
-        </p>
+          parameters, and function return types are not explicitly typed.<br>
+        </p><br>
+
         <h2 id="hello_world">Hello World</h2>
         <p>
           To get started with writing JavaScript, open the Scratchpad and write
           your first "Hello world" JavaScript code:
-        </p>
+        </p><br>
         <p class="none">
           function greetMe(yourName) { alert("Hello " + yourName); }
-          <br />greetMe("World");
-        </p>
+          <br>greetMe("World");
+        </p><br>
         <p>
-          Select the code in the pad and hit Ctrl+R to watch it unfold in your
-          browser!
-        </p>
+          Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
+        </p><br>
 
         <h2 id="variables">Variables</h2>
         <p>
           You use variables as symbolic names for values in your application.
           The names of variables, called identifiers, conform to certain
-          rules.<br />
+          rules.<br><br>
           A JavaScript identifier must start with a letter, underscore (_), or
           dollar sign ($); subsequent characters can also be digits (0-9).
           Because JavaScript is case sensitive, letters include the characters
           "A" through "Z" (uppercase) and the characters "a" through "z"
-          (lowercase).<br />
+          (lowercase).<br><br>
           You can use ISO 8859-1 or Unicode letters such as å and ü in
           identifiers. You can also use the Unicode escape sequences as
           characters in identifiers. Some examples of legal names are
-          Number_hits, temp99, and _name.<br />
-        </p>
+          Number_hits, temp99, and _name.<br>
+        </p><br>
 
         <h2 id="declaring_variables">Declaring Variables</h2>
         <span
-          >You can declare a variable in three ways: <br />With the keyword var.
-          For example,</span
-        >
-        <p class="none">var x = 42.</p>
-        <span
-          >This syntax can be used to declare both local and global variables.
-
-          <br />By simply assigning it a value. For example,</span
-        >
-        <p class="none">x = 42.</p>
-        <span
-          >This always declares a global variable. It generates a strict
+          >You can declare a variable in three ways: <br><br>With the keyword var.
+          For example,</span><br><br>
+        <p class="none">var x = 42.</p><br>
+        <span>This syntax can be used to declare both local and global variables.
+          <br><br>By simply assigning it a value. For example,</span><br><br>
+        <p class="none">x = 42.</p><br>
+        <span>This always declares a global variable. It generates a strict
           JavaScript warning. You shouldn't use this variant.
-
-          <br />With the keyword let. For example,</span
-        >
-        <p class="none">let y = 13.</p>
+        <br><br>With the keyword let. For example,</span><br><br>
+        <p class="none">let y = 13.</p><br>
         <span
           >This syntax can be used to declare a block scope local variable. See
-          Variable scope below.<br
-        /></span>
+          Variable scope below.<br></span><br><br>
 
         <h2 id="variable_scope">Variable Scope</h2>
         <p>
@@ -179,33 +168,33 @@
           global variable, because it is available to any other code in the
           current document. When you declare a variable within a function, it is
           called a local variable, because it is available only within that
-          function. <br />JavaScript before ECMAScript 2015 does not have block
+          function. <br><br>JavaScript before ECMAScript 2015 does not have block
           statement scope; rather, a variable declared within a block is local
           to the function (or global scope) that the block resides within. For
           example the following code will log 5, because the scope of x is the
           function (or global context) within which x is declared, not the
-          block, which in this case is an if statement.<br />
+          block, which in this case is an if statement.<br><br>
         </p>
-        <p class="none">if (true) { var x = 5; } console.log(x); // 5</p>
+        <p class="none">if (true) { var x = 5; } console.log(x); // 5</p><br>
         <p>
           This behavior changes, when using the let declaration introduced in
-          ECMAScript 2015.<br />
+          ECMAScript 2015.<br><br>
         </p>
         <p class="none">
           if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
           defined
-        </p>
+        </p><br><br>
 
         <h2 id="global_variables">Global Variables</h2>
         <p>
           Global variables are in fact properties of the global object. In web
           pages the global object is window, so you can set and access global
-          variables using the window.variable syntax. <br />Consequently, you
+          variables using the window.variable syntax. <br><br>Consequently, you
           can access global variables declared in one window or frame from
           another window or frame by specifying the window or frame name. For
           example, if a variable called phoneNumber is declared in a document,
           you can refer to this variable from an iframe as parent.phoneNumber.
-        </p>
+        </p><br><br>
 
         <h2 id="constants">Constants</h2>
         <p>
@@ -213,19 +202,19 @@
           syntax of a constant identifier is the same as for a variable
           identifier: it must start with a letter, underscore or dollar sign and
           can contain alphabetic, numeric, or underscore characters.
-        </p>
-        <p class="none">const PI = 3.14;</p>
+        </p><br>
+        <p class="none">const PI = 3.14;</p><br>
         <p>
           A constant cannot change value through assignment or be re-declared
           while the script is running. It has to be initialized to a value.
 
-          <br />The scope rules for constants are the same as those for let
+          <br><br>The scope rules for constants are the same as those for let
           block scope variables. If the const keyword is omitted, the identifier
           is assumed to represent a variable.
 
-          <br />You cannot declare a constant with the same name as a function
+          <br><br>You cannot declare a constant with the same name as a function
           or variable in the same scope. For example:
-        </p>
+        </p><br>
         <p class="none">
           // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
           <br />WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
@@ -234,14 +223,14 @@
         <br />
         <p>
           However, object attributes are not protected, so the following
-          statement is executed without problems.<br />
+          statement is executed without problems.<br><br>
         </p>
         <p class="none">
           const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
-        </p>
+        </p><br><br>
 
         <h2 id="data_types">Data Types</h2>
-        <p>The latest ECMAScript standard defines seven data types:</p>
+        <p>The latest ECMAScript standard defines seven data types:</p><br>
         <ul>
           <li>Six data types that are primitives:</li>
           <ul>
@@ -249,111 +238,109 @@
             <li>
               null. A special keyword denoting a null value. Because JavaScript
               is case-sensitive, null is not the same as Null, NULL, or any
-              other variant.
-            </li>
+              other variant.</li>
             <li>undefined. A top-level property whose value is undefined.</li>
             <li>Number. 42 or 3.14159.</li>
             <li>String. "Howdy"</li>
             <li>
               Symbol (new in ECMAScript 2015). A data type whose instances are
               unique and immutable.
-            </li>
+            </li><br>
           </ul>
           <li>and Object</li>
-        </ul>
+        </ul><br>
         <p>
           Although these data types are a relatively small amount, they enable
           you to perform useful functions with your applications. Objects and
           functions are the other fundamental elements in the language. You can
           think of objects as named containers for values, and functions as
           procedures that your application can perform.
-        </p>
+        </p><br><br>
 
         <h2 id="if_else_statements">if else statements</h2>
         <p>
           Use the if statement to execute a statement if a logical condition is
           true. Use the optional else clause to execute a statement if the
           condition is false. An if statement looks as follows:
-        </p>
+        </p><br>
         <p class="none">
           if (condition) { statement_1; } else { statement_2; }
-        </p>
+        </p><br>
         <p>
           condition can be any expression that evaluates to true or false. See
           Boolean for an explanation of what evaluates to true and false. If
           condition evaluates to true, statement_1 is executed; otherwise,
           statement_2 is executed. statement_1 and statement_2 can be any
-          statement, including further nested if statements. <br />You may also
+          statement, including further nested if statements. <br><br>You may also
           compound the statements using else if to have multiple conditions
           tested in sequence, as follows:
-        </p>
+        </p><br>
         <p class="none">
           if (condition_1) { statement_1; } else if (condition_2) {
           <br />statement_2; } else if (condition_n) { statement_n; } else {
           <br />statement_last; }
-        </p>
+        </p><br>
         <p>
           In the case of multiple conditions only the first logical condition
           which evaluates to true will be executed. To execute multiple
           statements, group them within a block statement ({ ... }) . In
           general, it's good practice to always use block statements, especially
           when nesting if statements:
-        </p>
+        </p><br>
         <p class="none">
           if (condition) { statement_1_runs_if_condition_is_true;
           <br />statement_2_runs_if_condition_is_true; } else {
           <br />statement_3_runs_if_condition_is_false;
           <br />statement_4_runs_if_condition_is_false; }
-        </p>
+        </p><br>
         <p>
           It is advisable to not use simple assignments in a conditional
           expression, because the assignment can be confused with equality when
           glancing over the code. For example, do not use the following code:
-        </p>
+        </p><br>
         <p class="none">if (x = y) { /* statements here */ }</p>
         <p>
           If you need to use an assignment in a conditional expression, a common
           practice is to put additional parentheses around the assignment. For
           example:
-        </p>
-        <p class="none">if ((x = y)) { /* statements here */ }</p>
+        </p><br>
+        <p class="none">if ((x = y)) { /* statements here */ }</p><br><br>
 
         <h2 id="while_statements">while statements</h2>
         <p>
           A while statement executes its statements as long as a specified
           condition evaluates to true. A while statement looks as follows:
-        </p>
-        <p class="none">while (condition) statement</p>
+        </p><br>
+        <p class="none">while (condition) statement</p><br>
         <p>
           If the condition becomes false, statement within the loop stops
           executing and control passes to the statement following the loop.
-          <br />The condition test occurs before statement in the loop is
+          <br><br>The condition test occurs before statement in the loop is
           executed. If the condition returns true, statement is executed and the
           condition is tested again. If the condition returns false, execution
           stops and control is passed to the statement following while.
 
-          <br />To execute multiple statements, use a block statement ({ ... })
+          <br><br>To execute multiple statements, use a block statement ({ ... })
           to group those statements.
 
-          <br />Example: <br />The following while loop iterates as long as n is
+          <br><br>Example: <br><br>The following while loop iterates as long as n is
           less than three:
-        </p>
-        <br />
-        <p class="none">var n = 0; var x = 0; while (n < 3) { n++; x += n; }</p>
+        </p><br>
+        <p class="none">var n = 0; var x = 0; while (n < 3) { n++; x += n; }</p><br>
         <p>
           With each iteration, the loop increments n and adds that value to x.
-          Therefore, x and n take on the following values:
+          Therefore, x and n take on the following values:<br><br>
           <li>After the first pass: n = 1 and x = 1</li>
           <li>After the second pass: n = 2 and x = 3</li>
-          <li>After the third pass: n = 3 and x = 6</li>
+          <li>After the third pass: n = 3 and x = 6</li><br>
           After completing the third pass, the condition n < 3 is no longer
           true, so the loop terminates.
-        </p>
+        </p><br><br>
 
         <h2 id="function_declarations">Function declarations</h2>
         <p>
           A function definition (also called a function declaration, or function
-          statement) consists of the function keyword, followed by:
+          statement) consists of the function keyword, followed by:<br><br>
           <li>The name of the function.</li>
           <li>
             A list of arguments to the function, enclosed in parentheses and
@@ -362,36 +349,34 @@
           <li>
             The JavaScript statements that define the function, enclosed in
             curly brackets, { }.
-          </li>
+          </li><br>
           For example, the following code defines a simple function named
           square:
-        </p>
-        <p class="none">function square(number) { return number * number; }</p>
+        </p><br>
+        <p class="none">function square(number) { return number * number; }</p><br>
         <p>
           The function square takes one argument, called number. The function
           consists of one statement that says to return the argument of the
           function (that is, number) multiplied by itself. The return statement
           specifies the value returned by the function.
-        </p>
-        <p class="none">return number * number;</p>
+        </p><br>
+        <p class="none">return number * number;</p><br>
         <p>
           Primitive parameters (such as a number) are passed to functions by
           value; the value is passed to the function, but if the function
           changes the value of the parameter, this change is not reflected
           globally or in the calling function.
-        </p>
+        </p><br><br>
 
         <h2 id="reference">Reference</h2>
         <li>
           All the documentation in this page is taken from
-          <li><a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
-            >MDN
-          </a></li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN
+          </a>
         </li>
         <br />
         <br />
-        <br /><br />
+        <br /><br/>
         <br />
         <br />
       </div>
